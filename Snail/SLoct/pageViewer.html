@@ -5,11 +5,12 @@
     <title>Snail Comics</title>
     <link href="SlSnailStyle.css" rel="stylesheet" />
 </head>
-<body>
+<body id="body" class="normal">
     <div>
         <script src="comicControl.js"></script>
-        <img class="pages" id="page" src="Pages/1.png" onclick="next()"> </img>
+        <img class="pages" id="page" src="Pages/1.png" onclick="next()" onerror="end()"> </img>
     <div class="buttons">
+        <br/> <br/>
         <button class="button" onclick="prev()">BACK</button>
         <button class="button" onclick="next()">NEXT</button>
     </div>
