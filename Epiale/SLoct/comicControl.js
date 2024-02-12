@@ -16,3 +16,8 @@ function prev() {
     window.scrollTo(0, 0);
 }
 
+function end() {
+    pageNo--;
+    document.getElementById("page").src = 'Pages/' + pageNo + '.png';
+}
+
