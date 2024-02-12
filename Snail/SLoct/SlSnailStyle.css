@@ -2,6 +2,12 @@ body {
     background-color: black;
 }
 
+body.carcosa {
+    background-image: url('spooky.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 img.pages {
     display: block;
     margin-left: auto;
