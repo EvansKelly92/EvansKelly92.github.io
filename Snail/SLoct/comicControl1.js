@@ -3,7 +3,7 @@ var bgChange = document.getElementById('body');
 
 function next() {
     pageNo++;
-    document.getElementById("page").src = 'Pages/' + pageNo + '.png';
+    document.getElementById("page").src = 'PagesR1/' + pageNo + '.png';
     window.scrollTo(0, 0);
     spookMode();
 }
@@ -21,7 +21,7 @@ function prev() {
 
 function end() {
     pageNo--;
-    document.getElementById("page").src = 'Pages/' + pageNo + '.png';
+    document.getElementById("page").src = 'PagesR1/' + pageNo + '.png';
 }
 
 function spookMode() {
