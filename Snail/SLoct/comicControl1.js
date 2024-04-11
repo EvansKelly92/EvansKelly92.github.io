@@ -1,11 +1,23 @@
 var pageNo = 1;
 var bgChange = document.getElementById('body');
 
+document.addEventListener("keyup", e => {
+    const k = e.key;
+    if (k == "ArrowRight" || k == "ArrowUp" || k == " " || k == "d" || k == "w")
+    {
+        next();
+    }
+    else if (k == "ArrowLeft" || k == "ArrowDown" || k == "Backspace" || k == "a" || k == "s")
+    {
+        prev();
+    }
+ });
+
+
 function next() {
     pageNo++;
     document.getElementById("page").src = 'PagesR1/' + pageNo + '.png';
     window.scrollTo(0, 0);
-    spookMode();
 }
 
 function prev() {
@@ -16,7 +28,6 @@ function prev() {
     }
     document.getElementById("page").src = 'PagesR1/' + pageNo + '.png';
     window.scrollTo(0, 0);
-    spookMode();
 }
 
 function end() {
