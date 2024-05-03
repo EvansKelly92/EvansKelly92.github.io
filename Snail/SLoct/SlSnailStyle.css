@@ -8,6 +8,12 @@ body.carcosa {
     background-position: center;
 }
 
+body.sploosh {
+    background-image: url('sploosh.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 img.pages {
     display: block;
     margin-left: auto;

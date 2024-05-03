@@ -21,11 +21,8 @@ function next() {
     pageNo++;
     document.getElementById("page").src = 'PagesR1/' + pageNo + '.png';
     window.scrollTo(0, 0);
-    if ((pageNo == 56) || (pageNo == 70))
-    {
-        spookMode();
-    }
  
+    backgroundChange();
     orbs();
 }
 
@@ -38,10 +35,7 @@ function prev() {
     document.getElementById("page").src = 'PagesR1/' + pageNo + '.png';
     window.scrollTo(0, 0);
 
-    if ((pageNo == 55) || (pageNo == 69))
-    {
-        spookMode();
-    }
+    backgroundChange();
 }
 
 function end() {
@@ -49,18 +43,48 @@ function end() {
     document.getElementById("page").src = 'PagesR1/' + pageNo + '.png';
 }
 
-function spookMode() {
-    if ((pageNo == 56) || (pageNo == 69))
-    {
-        bgChange.classList.remove("normal");
-        bgChange.classList.add("carcosa");
-    }
-    else 
-    {
-        bgChange.classList.remove("carcosa");
-        bgChange.classList.add("normal");
+function backgroundChange ()
+{
+    switch (pageNo) {
+        case 55:
+            bgChange.classList.remove("carcosa");
+            bgChange.classList.add("normal");
+            break;
+        
+        case 56: 
+            bgChange.classList.remove("normal");
+            bgChange.classList.add("carcosa"); 
+            break;
+
+        case 69: 
+            bgChange.classList.remove("normal");
+            bgChange.classList.add("carcosa"); 
+            break;
+
+        case 70:
+            bgChange.classList.remove("carcosa");
+            bgChange.classList.add("normal");
+            break;
+
+        case 76:
+            bgChange.classList.remove("sploosh");
+            bgChange.classList.add("normal"); 
+            break;
+
+        case 77:
+            bgChange.classList.remove("normal");
+            bgChange.classList.add("sploosh"); 
+            break;
+
+        case 78:
+            bgChange.classList.remove("sploosh");
+            bgChange.classList.add("normal"); 
+            break;
+
+        default: break;
     }
 }
+
 
 function orbs() 
 {
