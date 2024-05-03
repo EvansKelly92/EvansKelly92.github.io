@@ -1,6 +1,9 @@
 var pageNo = 1;
 var bgChange = document.getElementById('body');
 
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
+
 document.addEventListener("keyup", e => {
     const k = e.key;
     if (k == "ArrowRight" || k == "ArrowUp" || k == " " || k == "d" || k == "w")
@@ -18,6 +21,12 @@ function next() {
     pageNo++;
     document.getElementById("page").src = 'PagesR1/' + pageNo + '.png';
     window.scrollTo(0, 0);
+    if ((pageNo == 56) || (pageNo == 70))
+    {
+        spookMode();
+    }
+ 
+    orbs();
 }
 
 function prev() {
@@ -28,6 +37,11 @@ function prev() {
     }
     document.getElementById("page").src = 'PagesR1/' + pageNo + '.png';
     window.scrollTo(0, 0);
+
+    if ((pageNo == 55) || (pageNo == 69))
+    {
+        spookMode();
+    }
 }
 
 function end() {
@@ -36,7 +50,7 @@ function end() {
 }
 
 function spookMode() {
-    if (pageNo >= 25 && pageNo <= 39)
+    if ((pageNo == 56) || (pageNo == 69))
     {
         bgChange.classList.remove("normal");
         bgChange.classList.add("carcosa");
@@ -46,4 +60,11 @@ function spookMode() {
         bgChange.classList.remove("carcosa");
         bgChange.classList.add("normal");
     }
+}
+
+function orbs() 
+{
+    let myImage = document.getElementById("orb");
+myImage.setAttribute("src", 'fire_orb.png');
+context.drawImage(myImage, 10, 10);
 }

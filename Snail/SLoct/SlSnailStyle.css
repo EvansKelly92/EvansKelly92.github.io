@@ -32,3 +32,17 @@ div.buttons {
 .button:hover {
     background-color: rgb(66, 113, 53);
 }
+
+canvas {
+    position: absolute;
+    height: 500px;
+    width: 95%;
+    margin: 0;
+    padding: 0; 
+    overflow: hidden;
+}
+
+img.orb 
+{
+    position: absolute;
+}
