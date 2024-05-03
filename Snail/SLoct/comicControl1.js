@@ -1,9 +1,6 @@
 var pageNo = 1;
 var bgChange = document.getElementById('body');
 
-var canvas = document.getElementById('canvas');
-var context = canvas.getContext('2d');
-
 document.addEventListener("keyup", e => {
     const k = e.key;
     if (k == "ArrowRight" || k == "ArrowUp" || k == " " || k == "d" || k == "w")
@@ -23,7 +20,6 @@ function next() {
     window.scrollTo(0, 0);
  
     backgroundChange();
-    orbs();
 }
 
 function prev() {
@@ -83,12 +79,4 @@ function backgroundChange ()
 
         default: break;
     }
-}
-
-
-function orbs() 
-{
-    let myImage = document.getElementById("orb");
-myImage.setAttribute("src", 'fire_orb.png');
-context.drawImage(myImage, 10, 10);
 }

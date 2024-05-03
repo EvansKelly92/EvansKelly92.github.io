@@ -10,8 +10,8 @@ body.carcosa {
 
 body.sploosh {
     background-image: url('sploosh.png');
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
 }
 
 img.pages {
@@ -39,16 +39,6 @@ div.buttons {
     background-color: rgb(66, 113, 53);
 }
 
-canvas {
-    position: absolute;
-    height: 500px;
-    width: 95%;
-    margin: 0;
-    padding: 0; 
-    overflow: hidden;
-}
-
-img.orb 
-{
+head.orbs {
     position: absolute;
 }
