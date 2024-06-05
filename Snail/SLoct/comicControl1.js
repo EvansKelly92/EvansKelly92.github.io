@@ -3,11 +3,11 @@ var bgChange = document.getElementById('body');
 
 document.addEventListener("keyup", e => {
     const k = e.key;
-    if (k == "ArrowRight" || k == "ArrowUp" || k == " " || k == "d" || k == "w")
+    if (k == "ArrowRight" || k == " " || k == "w")
     {
         next();
     }
-    else if (k == "ArrowLeft" || k == "ArrowDown" || k == "Backspace" || k == "a" || k == "s")
+    else if (k == "ArrowLeft" || k == "Backspace" || k == "s")
     {
         prev();
     }
