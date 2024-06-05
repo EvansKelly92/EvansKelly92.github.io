@@ -8,6 +8,12 @@ body.carcosa {
     background-position: center;
 }
 
+body.sploosh {
+    background-image: url('sploosh.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 img.pages {
     display: block;
     margin-left: auto;
@@ -31,4 +37,8 @@ div.buttons {
 
 .button:hover {
     background-color: rgb(66, 113, 53);
+}
+
+head.orbs {
+    position: absolute;
 }
